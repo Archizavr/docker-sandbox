@@ -14,14 +14,29 @@ Both commands should display versions.
 
 ### PostreSQL
 
-Start server
+Start server PostreSQL
 ``` bash
 make pg_start
 ```
 [Open console](http://localhost:8080 "Adminer")
 
-Stop server
+Stop server PostreSQL
 ``` bash
 make pg_stop
 ```
 More detail: [PostgreSQL commands](/postgres/README.md)
+
+
+### Redis
+
+Start server Redis
+``` bash
+make redis_start
+```
+[Open console](http://localhost:5540/ "Redis Insight")
+
+Stop server Redis
+``` bash
+make redis_stop
+```
+More detail: [Redis commands](/redis/README.md)

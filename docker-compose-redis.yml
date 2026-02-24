@@ -1,0 +1,22 @@
+services:
+  redis:
+    image: redis:8.6.1-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis/data/cache:/data
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+
+  redisinsight:
+    image: redis/redisinsight:latest
+    container_name: redisinsight
+    ports:
+      - "5540:5540"
+    depends_on:
+      - redis
+    environment:
+    - RI_REDIS_HOST=redis
+    - RI_REDIS_PORT=6379
+    - RI_REDIS_ALIAS=Local Redis
