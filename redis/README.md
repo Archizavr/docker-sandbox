@@ -28,3 +28,10 @@ Try execute those commands in console:
 * Ctrl + c - leave console
 
 Check rest commands in official [documentation](https://redis.io/tutorials/howtos/quick-start/cheat-sheet/).
+
+Check how Redis works by launching [scenarios](/redis/scenarios/scenarios.md):
+* redis-scenario-0 *Healthcheck*
+* redis-scenario-1 *Working Simple Types*
+* redis-scenario-2 *TODO*
+* redis-scenario-3 *TODO*
+* redis-scenario-4 *TODO*
