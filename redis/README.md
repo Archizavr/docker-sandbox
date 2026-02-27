@@ -13,25 +13,11 @@ Connect to Redis console:
 docker exec -it redis redis-cli
 ```
 
-Try execute those commands in console:
-* SET user:1 "Artemy" - set key to hold the string value;
-* GET user:1 - retrieve the value of a key;
-* INCR num - increment the integer value of a key by 1;
-* DECR num - decrement the integer value of a key by 1;
-* EXPIRE session:1 10 - set a timeout on a key;
-* TTL session:1 - returns the remaining time to live of a key that has a timeout;
-* KEYS * - show all keys in database;
-* INFO - get information about database;
-* DBSIZE - get database size (number of objects);
-* FLUSHDB - clear current database;
-* FLUSHALL - clear all databases on server;
-* Ctrl + c - leave console
-
 Check rest commands in official [documentation](https://redis.io/tutorials/howtos/quick-start/cheat-sheet/).
 
 Check how Redis works by launching [scenarios](/redis/scenarios/scenarios.md):
-* redis-scenario-0 *Healthcheck*
-* redis-scenario-1 *Working Simple Types*
-* redis-scenario-2 *TODO*
-* redis-scenario-3 *TODO*
-* redis-scenario-4 *TODO*
+* [redis-scenario-0](/redis/scenarios/redis-scenario-0.sh) *Connectivity check*
+* [redis-scenario-1](/redis/scenarios/redis-scenario-1.sh) *Demonstrate commands for simple types: GET, SET, EXPIRE, etc.*
+* redis-scenario-2 *TODO: HASH, LIST*
+* redis-scenario-3 *TODO: SETS, SORTED SETS*
+* redis-scenario-4 *TODO: PUB/SUB, GEO*
