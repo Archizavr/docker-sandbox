@@ -18,7 +18,7 @@ Start server PostreSQL
 ``` bash
 make pg_start
 ```
-[Open console](http://localhost:8080 "Adminer")
+[Open console](http://localhost:8080 "Adminer") (localhost)
 
 Stop server PostreSQL
 ``` bash
@@ -33,7 +33,7 @@ Start server Redis
 ``` bash
 make redis_start
 ```
-[Open console](http://localhost:5540/ "Redis Insight")
+[Open console](http://localhost:5540/ "Redis Insight") (localhost)
 
 Stop server Redis
 ``` bash
