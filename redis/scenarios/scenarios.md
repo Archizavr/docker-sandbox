@@ -24,7 +24,7 @@ After all run `make run_redis_scenario-1`
 This scenario runs simple commands that works with strings, integers and TTL, like SET, GET, DEL, INCR, DECR, MSET, MGET, EXPIRE, PEXPIRE, etc.
 
 ### Scenario #2
-*TODO* HASH и LIST
+*TODO* HASH, LIST
 ### Scenario #3
 *TODO* SETS, SORTED SETS
 ### Scenario #4
