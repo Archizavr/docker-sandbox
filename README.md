@@ -40,3 +40,17 @@ Stop server Redis
 make redis_stop
 ```
 More detail: [Redis commands](/redis/README.md)
+
+### Nginx
+
+Start Nginx server
+``` bash
+make nginx_start
+```
+
+Stop Nginx server
+``` bash
+make nginx_stop
+```
+
+More detail: [Nginx commands](/nginx/README.md)

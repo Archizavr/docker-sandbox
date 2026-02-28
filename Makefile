@@ -35,5 +35,8 @@ redis_stop: ## Stop the docker compose for Redis
 nginx_start: ## Run the docker compose for Nginx
 	docker compose -f docker-compose-nginx.yml up -d
 
+nginx_renew_container: ## Restart the docker compose for Nginx
+	docker compose -f docker-compose-nginx.yml up -d --build
+
 nginx_stop: ## Stop the docker compose for Nginx
 	docker compose -f docker-compose-nginx.yml down -v

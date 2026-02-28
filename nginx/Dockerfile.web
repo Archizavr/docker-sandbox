@@ -1,0 +1,6 @@
+FROM nginx:1.29.5-alpine
+
+# Copy the website files into the container
+COPY simple-webpage /usr/share/nginx/html
+
+COPY simple-webpage/index2.html /usr/share/nginx/html/index.html
