@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  web-server:
+    build: ./nginx
+    container_name: nginx-server
+    ports:
+      - "8080:80"

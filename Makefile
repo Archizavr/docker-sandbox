@@ -29,3 +29,11 @@ run_redis_scenario-%: ## Run Redis scenario with specified file ID (default: 0)
 
 redis_stop: ## Stop the docker compose for Redis
 	docker compose -f docker-compose-redis.yml down -v
+
+
+##@ Nginx
+nginx_start: ## Run the docker compose for Nginx
+	docker compose -f docker-compose-nginx.yml up -d
+
+nginx_stop: ## Stop the docker compose for Nginx
+	docker compose -f docker-compose-nginx.yml down -v
