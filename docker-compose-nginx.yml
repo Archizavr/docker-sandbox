@@ -20,3 +20,11 @@ services:
       - ./nginx/html-arcade:/usr/share/nginx/html/html-arcade
       - ./nginx/simple-web-react:/usr/share/nginx/html/simple-web-react
 
+  web-react:
+    build:
+      context: ./nginx
+    container_name: nginx-react
+    ports:
+      - "8085:80"
+    volumes:
+      - ./nginx/react-ts/events.json:/usr/share/nginx/html/public/events.json:ro
