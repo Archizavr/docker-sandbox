@@ -11,16 +11,14 @@ Host static website, site code is copied and modified into nginx image (See [Doc
 ### web-multi
 Host 3 static websites (simple-webpage, html-arcade, simple-web-react). Site code isn't copied, however Nginx configuration customized in [nginx.conf](./nginx.conf).
 
-### web-react
-Host React application. Create containers by multistage building (first stage - building project using NodeJS, second - production with Nginx). See [Dockerfile](./Dockerfile) for more details.
-
-
-## Web Applications
-
+#### Web Applications
 - [simple-webpage](http://localhost:8082/): Basic HTML/CSS site (*index.html for web-multi container index2.html for web-single container*)
-- [html-arcade](http://localhost:8083/: JavaScript arcade game with modular class structure
+- [html-arcade](http://localhost:8083/): JavaScript arcade game with modular class structure
 - [simple-web-react](http://localhost:8084/): CDN React web application with component architecture
-- [react-ts](http://localhost:8085/): React application which show free seats on specific event
+
+### web-react
+Host React application. Create containers by multistage building (first stage - building project using NodeJS, second - production with Nginx). See [Dockerfile](./Dockerfile) for more details. Open [localhost:8085](http://localhost:8085/) to see result.
+
 
 ## Usage
 
