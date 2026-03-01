@@ -54,3 +54,16 @@ make nginx_stop
 ```
 
 More detail: [Nginx commands](/nginx/README.md)
+
+### Kafka
+
+Start Kafka server
+``` bash
+make kafka_start
+```
+
+Stop Kafka server
+``` bash
+make kafka_stop
+```
+More detail: [Kafka commands](/kafka/README.md)
