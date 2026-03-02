@@ -3,7 +3,7 @@
 DELAY=2
 CLI="docker exec -i kafka-1 /opt/kafka/bin/kafka-console-producer.sh"
 BROKER="kafka-1:19092"
-TOPIC="tts.irina.in"
+TOPIC="event_msg"
 
 send_message() {
   local msg="$1"
