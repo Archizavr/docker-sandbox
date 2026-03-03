@@ -66,4 +66,4 @@ Stop Kafka server
 ``` bash
 make kafka_stop
 ```
-More detail: [Kafka commands](/kafka/README.md)
+More detail: [Kafka commands + scenario](/kafka/README.md)
