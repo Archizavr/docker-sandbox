@@ -82,13 +82,13 @@ echo
 read -rsp $'Press any key to continue...\n' -n 1 key
 echo
 
-echo "Step 1️⃣1️⃣ : Send Message #4 to topic: $TOPIC"
-echo "Message #4" | $CLI --bootstrap-server $BROKER --topic $TOPIC
+echo "Step 1️⃣1️⃣ : Send Message #5 to topic: $TOPIC"
+echo "Message #5" | $CLI --bootstrap-server $BROKER --topic $TOPIC
 sleep $DELAY
 echo
 
-echo "Step 1️⃣2️⃣ : Send Messages #5 to topic: $TOPIC"
-echo "Message #5" | $CLI --bootstrap-server $BROKER --topic $TOPIC
+echo "Step 1️⃣2️⃣ : Send Messages #6 to topic: $TOPIC"
+echo "Message #6" | $CLI --bootstrap-server $BROKER --topic $TOPIC
 sleep $DELAY
 echo
 
@@ -99,14 +99,13 @@ echo
 read -rsp $'Press any key to continue...\n' -n 1 key
 echo
 
-echo "Step 1️⃣4️⃣ : Send Messages #6 to topic: $TOPIC"
-echo "Message #6" | $CLI --bootstrap-server $BROKER --topic $TOPIC
+echo "Step 1️⃣4️⃣ : Send Messages #7 to topic: $TOPIC"
+echo "Message #7" | $CLI --bootstrap-server $BROKER --topic $TOPIC
 sleep $DELAY
 
 echo
-echo "Step 1️⃣5️⃣ : Send Messages #7 to topic: $TOPIC"
-echo "Message #7" | $CLI --bootstrap-server $BROKER --topic $TOPIC
-sleep $DELAY
+echo "Step 1️⃣5️⃣ : Send Messages #8 to topic: $TOPIC"
+echo "Message #8" | $CLI --bootstrap-server $BROKER --topic $TOPIC
 echo
 read -rsp $'Press any key to continue...\n' -n 1 key
 echo
@@ -122,7 +121,6 @@ echo "}" >> temp_bad_messages.txt
 cat temp_bad_messages.txt
 $CLI  --bootstrap-server $BROKER --topic $TOPIC < temp_bad_messages.txt
 rm -f temp_bad_messages.txt
-sleep $DELAY
 echo
 read -rsp $'Press any key to continue...\n' -n 1 key
 echo
@@ -131,8 +129,8 @@ echo
 echo "Step 1️⃣7️⃣ : Sending a well formatted JSON message to topic: $TOPIC"
 echo "{\"orderId\": 123,\"userId\": 42,\"status\": \"CREATED\",\"total\": 99.90}" > temp_good_messages.txt
 $CLI  --bootstrap-server $BROKER --topic $TOPIC < temp_good_messages.txt
+cat temp_good_messages.txt
 rm -f temp_good_messages.txt
-sleep $DELAY
 echo
 read -rsp $'Press any key to continue...\n' -n 1 key
 echo
@@ -142,8 +140,8 @@ echo "Step 1️⃣8️⃣ : Sending multiple messages with key, but without sepa
 echo "1:{"orderId": 223,"userId": 123,"status": "CREATED","total": 99.90}" > temp_key_orders.txt
 echo "2:{"orderId": 224,"userId": 124,"status": "SHIPPED","total": 149.50}" >> temp_key_orders.txt
 $CLI  --bootstrap-server $BROKER --topic $TOPIC < temp_key_orders.txt
+cat temp_key_orders.txt
 rm -f temp_key_orders.txt
-sleep $DELAY
 echo
 read -rsp $'Press any key to continue...\n' -n 1 key
 echo
@@ -153,6 +151,7 @@ echo "1:{"orderId": 223,"userId": 123,"status": "CREATED","total": 99.90}" > tem
 echo "2:{"orderId": 224,"userId": 124,"status": "SHIPPED","total": 149.50}" >> temp_key_orders.txt
 echo "3:{"orderId": 225,"userId": 125,"status": "DELIVERED","total": 79.99}" >> temp_key_orders.txt
 $CLI  --bootstrap-server $BROKER --topic $TOPIC --property parse.key=true --property key.separator=:< temp_key_orders.txt
+cat temp_key_orders.txt
 rm -f temp_key_orders.txt
 sleep $DELAY
 
