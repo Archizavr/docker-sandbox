@@ -41,6 +41,7 @@ docker exec -ti kafka-1 /opt/kafka/bin/kafka-metadata-quorum.sh --bootstrap-serv
 ### Kafka scenario
 There is a simple test scenario to understand Kafka topic, offsets, groups, producer and consumers. Open 9 consoles and postion its in as [3x3] matrix. Picture below visualise scenario final outcome: 
 ![Process visualization](kafka-9.png "Process visualization")
+[Video Tutorial](https://youtu.be/4L8ErzXzJ1w)
 
 Run [scenario1.sh](/kafka/kafka_scenario1.sh) in top left console ([1,1]) by running command:
 `make kafka_run_scenario`
